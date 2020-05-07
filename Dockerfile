@@ -3,10 +3,10 @@ FROM node:10
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-COPY . /usr/src/app
+COPY . /usr/src/app/
 
 RUN npm install
 
-EXPOSE 3001
+EXPOSE $PORT
 
-ENTRYPOINT [ "node", "index.js" ]
+CMD [ "npm", "start" ]

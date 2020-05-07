@@ -65,4 +65,4 @@ app.get('/employees/:id', (req, res, next) => {
   return res.status(200).json(matches[0])
 })
 
-app.listen(process.env.port || 3000);
+app.listen(process.env.PORT || 3000);
