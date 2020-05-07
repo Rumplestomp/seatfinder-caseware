@@ -1,5 +1,17 @@
-- prop destructuring (Done; try to do it for props?)
-- styled components (getting there)
-- functional components (yup)
-- separate backend (restful api only) from react code (uuuh todo)
-- 
+Assignment application for Caseware
+
+Requirements: Node 10+
+
+Run instructions:
+
+`
+npm i
+node index.js
+`
+
+Docker build & run instructions:
+
+```
+docker build . -t {tagname}
+docker run -p 3000:3000 {tagname}
+```
