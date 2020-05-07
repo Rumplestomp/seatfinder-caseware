@@ -4,6 +4,7 @@
   "description": "practise app",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "serve": "nodemon index.js",
     "prod": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
