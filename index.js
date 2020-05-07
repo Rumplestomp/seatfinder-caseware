@@ -33,7 +33,6 @@ app.get('/', (req, res, next) => {
  */
 app.get('/employees', (req, res, next) => {
   let fname = req.query.fname || ''
-  console.log("fname:", fname);
   // first and/or last will be undefined if input wasn't valid/no last name given
   let [first, last] = validateFname(decodeURIComponent(fname))
 
@@ -50,7 +49,6 @@ app.get('/employees', (req, res, next) => {
       return employee.first_name.includes(capitalizeFirstLetter(first));
     }
   })
-  console.log("matches:", matches)
   return res.status(200).json(matches)
 });
 /**
@@ -67,4 +65,4 @@ app.get('/employees/:id', (req, res, next) => {
   return res.status(200).json(matches[0])
 })
 
-app.listen(3001);
+app.listen(process.env.port || 3001);
